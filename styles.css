@@ -1,0 +1,417 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DFkai-sb, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    width: 100%;
+  }
+}
+
+div.resume-container h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 20px;
+}
+
+header div.top {
+  padding: 1rem;
+  background: url(./images/transparent_background.png) center center/cover;
+}
+header div.top h2 {
+  font-size: 2.5rem;
+}
+header div.top h3 {
+  font-size: 1rem;
+}
+
+.active {
+  color: rgb(0, 87, 87);
+}
+
+body .main-nav {
+  top: 0;
+  z-index: 10; /* 使用z-index確保nav會在其他內容上方 */
+  padding-left: 0; /* Reset Bootstrap padding */
+}
+
+body .main-nav ul {
+  background-color: rgb(125, 124, 124);
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 6px -6px #777;
+  width: 100%; /* Stretch to full width */
+}
+
+body .main-nav ul li {
+  margin: 0 25px;
+  display: inline-block; /* Make sure li items are inline and not stacking */
+}
+
+body .main-nav ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: all 0.5s ease;
+  display: block; /* Make the anchor tag fill its container */
+}
+
+body .main-nav ul a:hover {
+  background-color: #eee;
+  color: rgb(0, 87, 87);
+}
+
+/* 用媒体查询使导航栏在小屏幕上堆叠 */
+@media screen and (max-width: 768px) {
+  body .main-nav ul {
+    flex-direction: column; /* 让导航项目在小屏幕上垂直排列 */
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  body .main-nav ul li {
+    margin: 5px 0; /* 修改垂直外边距 */
+    display: block; /* 将导航项目设置为块状元素 */
+  }
+}
+
+.custom-nav-link {
+  display: inline-block; /* 使連結在一行上水平排列 */
+  /* 這裡可以添加其他的預設樣式 */
+}
+
+/* 當裝置寬度小於或等於 768px 時 */
+@media (max-width: 768px) {
+  .custom-nav-link {
+    display: block; /* 使連結在新行上垂直排列 */
+    margin-bottom: 10px; /* 加上下邊距，使其有空間 */
+  }
+
+  .custom-tab-content {
+    margin-top: 10px; /* 加上上邊距，使其在 nav bar 之下 */
+  }
+}
+
+.copyright {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+.socials .socials-item {
+  margin-right: 15px;
+}
+.socials .socials-item:last-child {
+  margin-right: 0;
+}
+.socials .social-icon {
+  max-width: 24px;
+  height: auto;
+}
+
+.resume_content_infro {
+  text-align: center;
+}
+
+section {
+  padding: 1rem;
+  text-align: center;
+}
+section.infro h1 {
+  margin-top: 0;
+  color: #2c3e50;
+  padding: 1rem;
+}
+section a {
+  color: #3498db;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+section a:hover {
+  text-decoration: underline;
+}
+
+div.resume_content.resume_content_infro {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+.resume-container h2 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+}
+.resume-container ul {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.school-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#slider {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+#slider #slide-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.icon .socials {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+.icon .socials .socials-item {
+  margin: 0 10px;
+}
+.icon .socials .socials-item a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.icon .socials .socials-item a:hover {
+  transform: translateY(-5px);
+}
+.icon .socials .socials-item svg {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+.icon .socials .socials-item svg:hover {
+  fill: #0077b5;
+}
+
+/* Global scrollbar style */
+::-webkit-scrollbar {
+  width: 8px; /* Narrower scrollbar */
+  height: 8px; /* Useful for horizontal scrollbars */
+}
+
+/* Scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    45deg,
+    #f06,
+    #9f6
+  ); /* Gradient background */
+  border-radius: 4px; /* Rounded corners */
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+/* Scrollbar track (the stationary part) */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05); /* Track background color */
+  border-radius: 4px;
+}
+
+/* Thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(45deg, #e05, #8e5);
+  transform: scale(2);
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+
+/* Thumb active effect (when clicking and dragging) */
+::-webkit-scrollbar-thumb:active {
+  background-image: linear-gradient(45deg, #d04, #7d4);
+  opacity: 0.8; /* Slightly transparent when active */
+}
+
+/* Corner where both horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.infro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.infro-container p {
+  flex: 1;
+  margin-right: 20px;
+  text-align: center;
+}
+.infro-container .myimage {
+  width: 250px;
+  height: auto;
+}
+
+.custom-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-nav-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.custom-nav-link:hover {
+  background-color: #f8f9fa;
+}
+
+.custom-nav-link.active {
+  color: #495057;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.custom-tab-content .custom-tab-pane {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid #dee2e6;
+}
+
+.custom-tab-content .custom-tab-pane.active {
+  display: block;
+}
+
+.container {
+  display: flex;
+}
+
+.custom-nav {
+  flex: 1; /* 取得剩餘空間的1/4 */
+  max-width: 25%; /* 最大佔用25%的寬度 */
+  padding: 20px;
+  border-right: 1px solid #ccc; /* 添加邊框 */
+}
+
+.custom-tab-content {
+  flex: 5; /* 取得剩餘空間的3/4 */
+  max-width: 75%; /* 最大佔用75%的寬度 */
+  padding: 20px;
+}
+
+.custom-tab-pane {
+  display: none;
+}
+
+.custom-tab-pane.active {
+  display: block;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #eee;
+}
+
+/* 按鈕的基本樣式 */
+button {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* 平滑的背景和轉換效果 */
+}
+
+.container-for-contact-form {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 70vh; /* 全屏高度 */
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 2rem; /* 添加內部填充 */
+  border-radius: 8px; /* 圓角效果 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+  width: 100%;
+  max-width: 400px; /* 最大寬度 */
+}
+
+.input-field {
+  margin-bottom: 1rem;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
